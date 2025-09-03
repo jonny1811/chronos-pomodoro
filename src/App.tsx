@@ -1,17 +1,59 @@
-import { Heading } from './components/Heading';
+import { Container } from './components/Container';
+import { Logo } from './components/Logo';
 
 import './styles/theme.css';
 import './styles/global.css';
+import { Menu } from './components/Menu';
+import { CountDown } from './components/CountDown';
+import { DefaultInput } from './components/DefaultInput';
+import { Cycles } from './components/Cycles';
+import { DefaultButton } from './components/DefaultButton';
+import { PlayCircleIcon } from 'lucide-react';
+import { Footer } from './components/Footer';
 
 export function App() {
   return (
     <>
-      <Heading attr={123}>Hola Mundo 1</Heading>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, magni
-        odit nisi iusto velit consectetur eum pariatur saepe est, laborum eius
-        molestias placeat nostrum earum ipsum impedit ducimus cumque minus.
-      </p>
+      <Container>
+        <Logo />
+      </Container>
+
+      <Container>
+        <Menu />
+      </Container>
+
+      <Container>
+        <CountDown />
+      </Container>
+
+      <Container>
+        <form className='form' action=''>
+          <div className='formRow'>
+            <DefaultInput
+              id='myInput'
+              type='text'
+              labelText='task'
+              placeholder='Escriba algo'
+            />
+          </div>
+
+          <div className='formRow'>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+
+          <div className='formRow'>
+            <Cycles />
+          </div>
+
+          <div className='formRow'>
+            <DefaultButton icon={<PlayCircleIcon />} />
+          </div>
+        </form>
+      </Container>
+
+      <Container>
+        <Footer />
+      </Container>
     </>
   );
 }
