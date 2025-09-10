@@ -1,6 +1,7 @@
 import { Container } from '../../components/Container';
 import { GenericHtml } from '../../components/GenericHtml';
 import { Heading } from '../../components/Heading';
+import { RouterLink } from '../../components/RouterLink';
 import { MainTemplate } from '../../templates/MainTemplate';
 
 export function NotFound() {
@@ -17,10 +18,11 @@ export function NotFound() {
           </p>
           <p>
             Pero tranquilo, no estás perdido en el espacio (todavía). Puedes
-            volver de forma segura a la <a href='/'>página principal</a> o{' '}
-            <a href='/history'>al historial</a> — o puedes quedarte por aquí y
-            fingir que encontraste una página secreta a la que solo los
-            exploradores más geniales pueden acceder. 🧭✨
+            volver de forma segura a la{' '}
+            <RouterLink href='/'>página principal</RouterLink> o{' '}
+            <RouterLink href='/history'>al historial</RouterLink> — o puedes
+            quedarte por aquí y fingir que encontraste una página secreta a la
+            que solo los exploradores más geniales pueden acceder. 🧭✨
           </p>
           <p>
             Si crees que esta página debería existir (o si quieres charlar sobre
